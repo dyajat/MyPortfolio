@@ -1,0 +1,749 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure body and html take full height */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: #64ffda;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #020c1b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #64ffda;
+}
+
+
+.btn-resume {
+    border: 1px solid #64ffda;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for background, text, and border color */
+    color: #64ffda; /* Default text color */
+    background-color: transparent; /* Keep background transparent */
+}
+
+.btn-resume:hover {
+    background-color: #64ffda; /* Change background to #64ffda on hover */
+    color: #0a192f !important; /* Change text color to dark (so it's visible on light background) */
+    border: 1px solid #64ffda; /* Keep border color the same */
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: left; /* Ensures all text remains aligned left */
+}
+
+/* Intro text */
+.intro-text {
+    font-size: 1.1em;
+    color: #64ffda; /* Light cyan for the intro */
+    margin: 0; /* Remove any extra margin */
+}
+
+/* My name style */
+.my-name {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 0; /* Remove margin to reduce gap between name and quote */
+}
+
+/* Quote style - same as name size but different color */
+.quote {
+    font-size: 2.5em;
+    color: #b0b0b0; /* Light gray color for the quote */
+    margin: 0; /* Remove margin to bring it close to the name */
+}
+
+/* Description style */
+.description {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin: 15px 0;
+    line-height: 1.5; /* Improved line spacing */
+    max-width: 700px; /* Prevents the paragraph from becoming too wide */
+    text-align: left; /* Keeps the description left-aligned */
+}
+
+/* Call-to-action button */
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: transparent; /* Transparent background */
+    color: #64ffda; /* Text color #64ffda */
+    text-decoration: none;
+    border: 2px solid #64ffda; /* Border color #64ffda */
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for color and background */
+}
+
+.cta:hover {
+    background-color: #64ffda; /* Change background color on hover */
+    color: #0a192f; /* Change text color to dark */
+    border: 2px solid #64ffda; /* Keep border color the same */
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    text-align: center;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.social-links a p {
+    margin-top: 5px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* LinkedIn and GitHub specific styles */
+.linkedin .social-icon {
+    fill: #0077b5; /* LinkedIn blue */
+}
+
+.github .social-icon {
+    fill: #333; /* GitHub dark color */
+}
+
+
+/* About Section */
+/* #projects {
+    padding: 50px 20px;
+    text-align: center;
+} */
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Item */
+.section-item {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-item h2,
+.section-item h3 {
+    font-size: 2.5rem;
+    color: #00bfff; /* Blue color for section headings */
+    text-align: left;
+    font-weight: 600;
+}
+
+/* About Me Section */
+
+#about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* About Item Layout */
+.about-item {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-description {
+    margin-bottom: 2rem;
+}
+h3 {
+    text-align: left;
+    font-size: 2rem; /* Increased font size for h3 titles */
+    color: #64ffda; /* Color for h3 titles to match the style */
+    margin-bottom: 1rem; /* Space below the h3 titles */
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+/* Education Section */
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: #112240;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.education-details {
+    flex: 1;
+    text-align: left;
+}
+
+.education-details h4 {
+    font-size: 1.6rem;
+    color: #00bfff;
+}
+
+.education-details p {
+    color: #d3d3d3;
+}
+
+.education-details .btn {
+    background-color: #00bfff;
+    color: #0a192f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.education-details .btn:hover {
+    background-color: #007bb5;
+}
+
+.college-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.achievement-item {
+    background-color:  #112240;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    text-align: center;
+}
+
+.achievement-item img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain; 
+    margin-bottom: 0.5 rem;
+}
+
+.achievement-details {
+    text-align: left;
+}
+
+.achievement-details h4 {
+    font-size: 1.6rem;
+    color: #00bfff;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-details p {
+    color: #d3d3d3;
+    margin-bottom: 1rem;
+}
+
+.achievement-details .btn {
+    background-color: #00bfff;
+    color: #0a192f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.achievement-details .btn:hover {
+    background-color: #007bb5;
+}
+
+/* Hobbies Section */
+.hobbies-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hobby-item {
+    background-color:  #112240;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.hobby-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.hobby-item h4 {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-item {
+        margin-bottom: 2rem;
+    }
+
+    .achievements-grid {
+        flex-direction: column;
+    }
+
+    .hobbies-list {
+        flex-direction: column;
+    }
+
+    .hobby-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .about-description {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-description .intro {
+        font-size: 1rem;
+    }
+
+    .achievement-details h4 {
+        font-size: 1.4rem;
+    }
+
+    .hobby-item h4 {
+        font-size: 1rem;
+    }
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* This ensures 2 columns in each row */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #00bfff;
+    margin-bottom: 1.5rem;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+/* Style for View Project links */
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #64ffda; /* Light cyan for the background */
+    color: #0a192f; /* Dark text color to stand out */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600; /* Slightly bold to make it stand out */
+    transition: all 0.3s ease; /* Smooth transition for color change */
+}
+
+.project-card a:hover {
+    background-color: #00bfff; /* Change background color on hover */
+    color: #ffffff; /* Change text color to white */
+    transform: scale(1.05); /* Slightly scale up the button for effect */
+}
+
+
+/* Skills Section */
+#skills {
+    /* padding: 5rem 2rem; */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Skills Group Layout */
+.skills-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Category Section */
+.skills-category {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background-color: #112240;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    color: #00bfff;
+    margin-bottom: 1.5rem;
+}
+
+/* Skill Items within Categories */
+.skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#263144;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: 100px;
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-item img {
+    width: 60px; /* Logo size */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-item span {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+}
+
+/* Responsive Layout for Mobile Devices */
+@media (max-width: 768px) {
+    .skills-group {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills-category {
+        flex: 1 1 100%;
+    }
+
+    .skill-item {
+        flex: 1 1 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    #skills h2 {
+        font-size: 2rem;
+    }
+
+    .skills-category h3 {
+        font-size: 1.5rem;
+    }
+
+    .skill-item span {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Contact Information Styling */
+#contact p {
+    font-size: 1.2rem;
+    color: #ccd6f6;
+    margin-bottom: 1.5rem;
+}
+
+#contact a {
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #52e2c4;
+    text-decoration: underline;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #112240;
+    border-radius: 8px;
+    background-color: #0a192f; /* Dark background */
+    color: #ccd6f6; /* Light text color */
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #64ffda; /* Cyan border when focused */
+    outline: none; /* Remove default outline */
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #64ffda; /* Light cyan background */
+    color: #0a192f; /* Dark text */
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #52e2c4; /* Lighter cyan on hover */
+    color: #fff; /* White text */
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Responsive Layout for Mobile Devices */
+@media (max-width: 768px) {
+    #contact {
+        padding: 30px 20px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form input, form textarea {
+        font-size: 1rem; /* Slightly smaller font size on mobile */
+    }
+
+    form button {
+        font-size: 1rem; /* Adjust button size on mobile */
+    }
+
+    /* Adjust text styling for links */
+    #contact p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Resume Section */
+#resume {
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+#resume h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+#resume p {
+    font-size: 1.2rem;
+    color: #ccd6f6; /* Light text color */
+    margin-bottom: 30px;
+}
+
+/* Download Button */
+.btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #64ffda; /* Cyan background */
+    color: #0a192f; /* Dark text color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn-download:hover {
+    background-color: #52e2c4; /* Lighter cyan on hover */
+    color: #0a192f; /* Ensure text color remains dark */
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.btn-download:active {
+    transform: scale(0.98); /* Slight shrink when clicked */
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    #resume {
+        padding: 30px 20px;
+    }
+
+    #resume h2 {
+        font-size: 2rem;
+    }
+
+    #resume p {
+        font-size: 1rem;
+    }
+
+    .btn-download {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #020c1b;
+    color: #ccd6f6;
+    margin-top: auto; /* Push the footer to the bottom */
+}
